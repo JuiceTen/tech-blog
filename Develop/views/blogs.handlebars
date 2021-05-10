@@ -1,0 +1,39 @@
+<article class='blog'>
+    <header>
+        <nav>
+        <h2 class='title'>{{title}}</h2>
+        </nav>
+    </header>
+    <div>
+    <p>
+        {{content}}
+    </p>
+    </div>
+    <br>
+    <div>
+        <p>By: {{user.name}}</p>
+        <p>Created: {{createdAt}}</p>
+    </div>
+    {{#if logged_in}}
+    <form class="comment-form" data-id='{{id}}'>
+        <div>
+            <textarea class="ml-5" name="comment-body" id="comment-text" data-id='{{id}}'></textarea>
+        </div>
+
+        <div>
+            <button class="button is-warning ml-5 mb-5" type="submit" data-id='{{id}}'>add comment</button>
+        </div>
+  
+    </form>
+    {{/if}}
+
+    {{> comments-post}}
+ 
+
+    {{#if logged_in}}
+
+    <script src='/js/comment.js'></script>
+
+    {{/if}}
+    
+</article>
