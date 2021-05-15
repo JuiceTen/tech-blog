@@ -18,13 +18,6 @@ const login = async (e) => {
             alert (response.statusText);
         }
 
-        // const res = await axios.get('/api/users/login')
-
-        // if (res) {
-        //     document.location.replace('/profile');
-        // } else {
-        //     alert (res.statusText);
-        // }
     }
 };
 
